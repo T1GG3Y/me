@@ -1,0 +1,774 @@
+<html>
+
+
+<!--=======================================================================-->
+
+
+<head>
+    <title>Gym Workout Program</title>
+    <script type='text/javascript' src='http://epilog.stanford.edu/javascript/epilog.js'></script>
+    <script type='text/javascript' src='http://worksheets.stanford.edu/javascript/worksheets.js'></script>
+</head>
+
+
+<!--=======================================================================-->
+
+
+<body style='background-color:#990090' onload='initialize()'>
+
+
+<!--=========================================================================-->
+
+<body>
+ 
+  <table align="left" border="1" cellpadding="10" cellspacing="0"  border-radius: 10px; style="background-color: white;">
+      <tr>                             
+          <td>
+              <form>
+                  <table>
+                      <tr> 
+<h1  style="font-size:1.5em; ">1 Rep Max Calculator:</h1>
+</br>
+
+                          <td>
+                              <label for="weight">Weight:</label>
+                          </td>
+                          <td>
+                              <input type="number" id="weight" size="10" onchange="modtext(this)" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <label for="reps">Reps:</label>
+                          </td>
+                          <td>
+                              <input id="reps" type="number" size="10" onchange="modtext(this)" />
+                          </td>
+                      </tr>
+                  </table>
+              </form>
+              <button id="findmax" style="margin-top: 10px" onclick="modbutton(this)">Find Max</button>
+             
+<fieldset style="margin-top: 10px; border-radius: 5px; background-color: #ffffff;">
+                  <div id="showmax" style="font-weight: bold; color: black;">
+                      Max:
+                  </div>
+              </fieldset>
+
+
+          </td>
+      </tr>
+  </table>
+<table align="left" border="1" cellpadding="34" cellspacing="0"  border-radius: 10px; style="background-color: white;"">
+<tr>
+          <td>
+                  <table>
+                      <tr>
+                          <td>
+<button id="squatpr" style="margin-top: 10px; height:30px; width:100px" onclick="modbutton(this)">
+Squat
+ </button>
+</br>
+<button id="benchpr" style="margin-top: 10px; height:30px; width:100px" onclick="modbutton(this)">
+Bench
+ </button>
+</br>
+
+
+<button id="deadliftpr" style="margin-top: 10px; height:30px; width:100px" onclick="modbutton(this)">
+Deadlift
+ </button>
+</br>
+
+
+<button id="rowpr" style="margin-top: 10px; height:30px; width:100px" onclick="modbutton(this)">
+Row
+ </button>
+</td>
+                      </tr>
+                  </table>
+</tr>
+          </td>
+
+
+
+
+</table>
+</body>
+
+
+
+  
+
+<center>
+    <table width='720' bgcolor='#ffffff'>
+        <tr>
+            <td>
+
+
+                <br />
+                <center>
+                    <h2 style='margin-top:0px;padding-top:0px;font-size:1.2em'>
+                        STANFORD UNIVERSITY<br />
+                        Gym Workout Program<br />
+                    </h2>
+                </center>
+
+
+                <fieldset>
+                    <legend>Select Muscle Group</legend>
+                    <table>
+                        <tr>
+                            <td width='120'><input type='checkbox' id='back' onChange='modcheck(this)' />Back</td>
+                            <td width='120'><input type='checkbox' id='neck' onChange='modcheck(this)' />Neck</td>
+                            <td width='120'><input type='checkbox' id='chest' onChange='modcheck(this)' />Chest</td>
+                            <td width='120'><input type='checkbox' id='arms' onChange='modcheck(this)' />Arms</td>
+                            <td width='120'><input type='checkbox' id='quads' onChange='modcheck(this)' />Quads</td>
+                        </tr>
+                        <tr>
+                            <td width='120'><input type='checkbox' id='shoulders' onChange='modcheck(this)' />Shoulders</td>
+                            <td width='120'><input type='checkbox' id='abs' onChange='modcheck(this)' />Abs</td>
+                            <td width='120'><input type='checkbox' id='hips' onChange='modcheck(this)' />Hips</td>
+                            <td width='120'><input type='checkbox' id='glutes' onChange='modcheck(this)' />Glutes</td>
+                            <td width='120'><input type='checkbox' id='calves' onChange='modcheck(this)' />Calves</td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Select Exercises</legend>
+                    <table>
+                        <tr>
+                            <td width='120'><input type='checkbox' id='squat' onChange='modcheck(this)' />Squat</td>
+                            <td width='120'><input type='checkbox' id='deadlift' onChange='modcheck(this)' />Deadlift</td>
+                            <td width='120'><input type='checkbox' id='benchpress' onChange='modcheck(this)' />Bench Press</td>
+                            <td width='120'><input type='checkbox' id='pullup' onChange='modcheck(this)' />Pull-Up</td>
+                            <td width='120'><input type='checkbox' id='latpulldown' onChange='modcheck(this)' />Lat Pulldown</td>
+                        </tr>
+                        <tr>
+                            <td width='120'><input type='checkbox' id='pushup' onChange='modcheck(this)' />Push-Up</td>
+                            <td width='120'><input type='checkbox' id='shrugs' onChange='modcheck(this)' />Shrugs</td>
+                            <td width='120'><input type='checkbox' id='lunge' onChange='modcheck(this)' />Lunge</td>
+                            <td width='120'><input type='checkbox' id='row' onChange='modcheck(this)' />Row</td>
+                            <td width='120'><input type='checkbox' id='neckextension' onChange='modcheck(this)' />Neck Extension</td>
+                        </tr>
+                        <tr>
+                            <td width='120'><input type='checkbox' id='chestfly' onChange='modcheck(this)' />Chest Fly</td>
+                            <td width='120'><input type='checkbox' id='calfraise' onChange='modcheck(this)' />Calf Raise</td>
+                            <td width='120'><input type='checkbox' id='bicepcurl' onChange='modcheck(this)' />Bicep Curl</td>
+                            <td width='120'><input type='checkbox' id='tricepextension' onChange='modcheck(this)' />Tricep Extension</td>
+                            <td width='120'><input type='checkbox' id='crunches' onChange='modcheck(this)' />Crunches</td>
+                        </tr>
+                        <tr>
+                            <td width='120'><input type='checkbox' id='dumbbellfly' onChange='modcheck(this)' />Dumbbell Fly</td>
+                            <td width='120'><input type='checkbox' id='squatjumps' onChange='modcheck(this)' />Squat Jumps</td>
+                            <td width='120'><input type='checkbox' id='bentfly' onChange='modcheck(this)' />Bent Over Fly</td>
+                            <td width='120'><input type='checkbox' id='dragos' onChange='modcheck(this)' />Dragos</td>
+                            <td width='120'><input type='checkbox' id='butterlflykicks' onChange='modcheck(this)' />Butterfly Kicks</td>
+                        </tr>
+                        <tr>
+                            <td width='120'><input type='checkbox' id='glutehamraise' onChange='modcheck(this)' />Glute Ham Raise</td>
+                            <td width='120'><input type='checkbox' id='mountainclimbers' onChange='modcheck(this)' />Mountain Climber</td>
+                            <td width='120'><input type='checkbox' id='shoulderpress' onChange='modcheck(this)' />Shoulder Press</td>
+                            <td width='120'><input type='checkbox' id='inclinepress' onChange='modcheck(this)' />Incline Press</td>
+                            <td width='120'><input type='checkbox' id='hipthrust' onChange='modcheck(this)' />Hip Thrust</td>
+                        </tr>
+                        
+                    </table>
+                <fieldset>
+                    <table>
+                        
+        
+                  <tr>
+                    <td id="errormessage" style="color: red;">    
+              
+                  <th><button id="clear" style='margin-top: 10px' onclick="modbutton(this)">
+                    Clear All
+                        </button></th>
+                <th>  
+                 
+          <button id="makesets" style='margin-top: 10px' onclick="modbutton(this)">
+          Generate Sets
+              </button>
+                  </tr>
+              </tr>
+                    </th>
+                </table>
+                </fieldset>
+                </fieldset>
+
+
+                <br />
+                <fieldset>
+                    <table width='100%' border="1">
+                        
+                    
+    <tr>
+      <th>Exercise</th>
+      <th>Number of Sets:  
+        <button id="sets13" style="margin-top: 10px;" onclick="modbutton(this)">
+3 Sets
+
+
+    </button>
+<button id="sets14" style='margin-top: 10px' onclick="modbutton(this)">
+4 Sets
+
+
+    </button>
+<button id="sets15" style='margin-top: 10px' onclick="modbutton(this)">
+5 Sets
+
+
+    </button>
+
+</th>
+          </tr>
+
+
+
+
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise1">
+	Ex1:
+
+
+      </td>
+      <td id=num1>
+      </td>
+    </tr>
+</tr>
+     </tr>
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise2">
+	Ex3:
+
+
+      </td>
+      <td id=num2>
+      </td>
+    </tr>
+</tr>
+     </tr>
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise3">
+	Ex3:
+
+
+      </td>
+      <td id=num3>
+      </td>
+    </tr>
+</tr>
+     </tr>
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise4">
+	Ex4:
+
+
+      </td>
+      <td id=num4>
+      </td>
+    </tr>
+</tr>
+
+
+
+
+                    </table>
+                </fieldset>
+
+
+                <br />
+                <fieldset>
+                    <table width='100%' border="1">
+                        
+
+
+    <tr>
+      <th>Exercise</th>
+      <th>Number of Sets:  
+        <button id="sets23" style='margin-top: 10px' onclick="modbutton(this)">
+3 Sets
+
+
+    </button>
+<button id="sets24" style='margin-top: 10px' onclick="modbutton(this)">
+4 Sets
+
+
+    </button>
+<button id="sets25" style='margin-top: 10px' onclick="modbutton(this)">
+5 Sets
+
+</th>
+          </tr>
+
+
+
+
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise5">
+	Ex1:
+
+
+      </td>
+      <td id=num5>
+      </td>
+    </tr>
+</tr>
+     </tr>
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise6">
+	Ex3:
+
+
+      </td>
+      <td id=num6>
+      </td>
+    </tr>
+</tr>
+     </tr>
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise7">
+	Ex3:
+
+
+      </td>
+      <td id=num7>
+      </td>
+    </tr>
+</tr>
+     </tr>
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise8">
+	Ex4:
+
+
+      </td>
+      <td id=num8>
+      </td>
+    </tr>
+</tr>
+
+
+
+
+                    </table>
+                </fieldset>
+
+                <br />
+                <fieldset>
+                    <table width='100%' border="1">
+                        
+
+
+    <tr>
+      <th>Exercise</th>
+      <th>Number of Sets:  
+        <button id="sets33" style='margin-top: 10px' onclick="modbutton(this)">
+3 Sets
+
+
+    </button>
+<button id="sets34" style='margin-top: 10px' onclick="modbutton(this)">
+4 Sets
+
+
+    </button>
+<button id="sets35" style='margin-top: 10px' onclick="modbutton(this)">
+5 Sets
+
+</th>
+          </tr>
+
+
+
+
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise9">
+	Ex1:
+
+
+      </td>
+      <td id=num9>
+      </td>
+    </tr>
+</tr>
+     </tr>
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise10">
+	Ex3:
+
+
+      </td>
+      <td id=num10>
+      </td>
+    </tr>
+</tr>
+     </tr>
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise11">
+	Ex3:
+
+
+      </td>
+      <td id=num11>
+      </td>
+    </tr>
+</tr>
+     </tr>
+<tr class="row">
+      </tr>
+    <tr>
+      <td id="exercise12">
+	Ex4:
+
+
+      </td>
+      <td id=num12>
+      </td>
+    </tr>
+</tr>
+
+
+
+
+                    </table>
+                </fieldset>
+
+
+
+            </td>
+        </tr>
+    </table>
+</center>
+<br />
+
+
+<!--=======================================================================-->
+
+
+<dataset id='lambda' style='font-family:courier;display:none' rows='20' cols='20'>
+
+numsets(3)
+numsets(4)
+numsets(5)
+
+exercise(back, pullup)
+exercise(back, row)
+exercise(back, latpulldown)
+exercise(back, deadlift)
+exercise(neck, shrugs)
+exercise(neck, neckextension)
+exercise(chest, benchpress)
+exercise(chest, chestfly)
+exercise(chest, pushup)
+exercise(chest, inclinepress)
+exercise(arms, bicepcurl)
+exercise(arms, dumbbellfly)
+exercise(arms, tricepextension)
+exercise(arms, benchpress)
+exercise(arms, shrugs)
+exercise(arms, shoulderpress)
+exercise(quads, squat)
+exercise(quads, lunge)
+exercise(quads, deadlift)
+exercise(quads, squatjumps)
+exercise(shoulders, dumbbellfly)
+exercise(shoulders, shrugs)
+exercise(shoulders, row)
+exercise(shoulders, bentfly)
+exercise(shoulders, shoulderpress)
+exercise(abs, crunches)
+exercise(abs, dragos)
+exercise(abs, mountainclimbers)
+exercise(abs, butterlflykicks)
+exercise(glutes, squat)
+exercise(glutes, deadlift)
+exercise(glutes, lunge)
+exercise(glutes, glutehamraise)
+exercise(hips, squat)
+exercise(hips, glutehamraise)
+exercise(hips, hipthrust)
+exercise(calves, calfraise)
+exercise(calves, squatjumps)
+
+name(pullup, "Pull-Up")
+name(row, "Row")
+name(latpulldown, "Lat Pulldown")
+name(deadlift, "Deadlift")
+name(shrugs, "Shrugs")
+name(neckextension, "Neck Extension")
+name(benchpress, "Bench Press")
+name(chestfly, "Chest Fly")
+name(pushup, "Push-Up")
+name(inclinepress, "Incline Press")
+name(bicepcurl, "Bicep Curl")
+name(dumbbellfly, "Dumbbell Fly")
+name(tricepextension, "Tricep Extension")
+name(shoulderpress, "Shoulder Press")
+name(squat, "Squat")
+name(lunge, "Lunge")
+name(squatjumps, "Squat Jumps")
+name(bentfly, "Bent-Over Fly")
+name(crunches, "Crunches")
+name(dragos, "Dragos")
+name(mountainclimbers, "Mountain Climbers")
+name(butterlflykicks, "Butterfly Kicks")
+name(glutehamraise, "Glute-Ham Raise")
+name(hipthrust, "Hip Thrust")
+name(calfraise, "Calf Raise")
+
+
+setreps(pullup, 3, 10)
+setreps(row, 3, 10)
+setreps(latpulldown, 3, 20)
+setreps(deadlift, 3, 6)
+setreps(shrugs, 3, 20)
+setreps(neckextension, 3, 20)
+setreps(benchpress, 3, 10)
+setreps(chestfly, 3, 20)
+setreps(pushup, 3, 20)
+setreps(inclinepress, 3, 10)
+setreps(bicepcurl, 3, 20)
+setreps(dumbbellfly, 3, 15)
+setreps(tricepextension, 3, 20)
+setreps(shoulderpress, 3, 12)
+setreps(squat, 3, 10)
+setreps(lunge, 3, 15)
+setreps(squatjumps, 3, 15)
+setreps(bentfly, 3, 15)
+setreps(crunches, 3, 50)
+setreps(dragos, 3, 10)
+setreps(mountainclimbers, 3, 50)
+setreps(butterlflykicks, 3, 50)
+setreps(glutehamraise, 3, 10)
+setreps(hipthrust, 3, 10)
+setreps(calfraise, 3, 30)
+setreps(pullup, 4, 8)
+setreps(row, 4, 8)
+setreps(latpulldown, 4, 15)
+setreps(deadlift, 4, 5)
+setreps(shrugs, 4, 15)
+setreps(neckextension, 4, 15)
+setreps(benchpress, 4, 8)
+setreps(chestfly, 4, 15)
+setreps(pushup, 4, 15)
+setreps(inclinepress, 4, 8)
+setreps(bicepcurl, 4, 15)
+setreps(dumbbellfly, 4, 12)
+setreps(tricepextension, 4, 15)
+setreps(shoulderpress, 4, 10)
+setreps(squat, 4, 8)
+setreps(lunge, 4, 10)
+setreps(squatjumps, 4, 12)
+setreps(bentfly, 4, 12)
+setreps(crunches, 4, 40)
+setreps(dragos, 4, 8)
+setreps(mountainclimbers, 4, 40)
+setreps(butterlflykicks, 4, 40)
+setreps(glutehamraise, 4, 8)
+setreps(hipthrust, 4, 8)
+setreps(calfraise, 4, 25)
+setreps(pullup, 5, 6)
+setreps(row, 5, 6)
+setreps(latpulldown, 5, 12)
+setreps(deadlift, 5, 4)
+setreps(shrugs, 5, 12)
+setreps(neckextension, 5, 12)
+setreps(benchpress, 5, 6)
+setreps(chestfly, 5, 12)
+setreps(pushup, 5, 12)
+setreps(inclinepress, 5, 6)
+setreps(bicepcurl, 5, 12)
+setreps(dumbbellfly, 5, 10)
+setreps(tricepextension, 5, 12)
+setreps(shoulderpress, 5, 8)
+setreps(squat, 5, 6)
+setreps(lunge, 5, 8)
+setreps(squatjumps, 5, 10)
+setreps(bentfly, 5, 10)
+setreps(crunches, 5, 30)
+setreps(dragos, 5, 6)
+setreps(mountainclimbers, 5, 30)
+setreps(butterlflykicks, 5, 30)
+setreps(glutehamraise, 5, 6)
+setreps(hipthrust, 5, 6)
+setreps(calfraise, 5, 20)
+
+
+style(sets13, background-color, white)
+style(sets14, background-color, white)
+style(sets15, background-color, white) 
+style(sets23, background-color, white) 
+style(sets24, background-color, white) 
+style(sets25, background-color, white) 
+style(sets33, background-color, white) 
+style(sets34, background-color, white) 
+style(sets35, background-color, white) 
+
+style(squatpr, background-color, white)
+style(benchpr, background-color, white)
+style(deadliftpr, background-color, white) 
+style(rowpr, background-color, white)
+
+
+</dataset>
+<!--=======================================================================-->
+
+<dataset id='testdata' type='text/hrf' style='display:none'></dataset>
+
+<!--=======================================================================-->
+
+<ruleset id='library' style='font-family:courier;display:none' rows='20'>
+
+    % Selecting boxes for Muscle Groups and Exercises
+    select(X,true) :: exercise(X,Y) ==> value(X,true) & value(Y,true) & cur_muscle(X) & cur_exercise(Y) & ~yes(clear)
+    select(X,false) :: exercise(X,Y) ==> ~value(X,true) & ~value(Y,true) & ~cur_muscle(X) & ~cur_exercise(Y)
+    select(Y,true) :: exercise(X,Y) ==> value(Y,true) & cur_exercise(Y) & ~yes(clear)
+    select(Y,false) :: exercise(X,Y) ==> ~value(Y,true) &~cur_exercise(Y)
+
+    % Clicking and highlighting of 3/4/5 Sets boxes
+    click(sets13) :: cur_numsets1(X) ==> ~cur_numsets1(X) & style(sets14, background-color, white) & ~style(sets14, background-color, yellow) & style(sets15, background-color, white) & ~style(sets15, background-color, yellow)
+    click(sets13) :: cur_numsets1(3) & style(sets13, background-color, yellow) & ~style(sets13, background-color, white)
+    click(sets14) :: cur_numsets1(X) ==> ~cur_numsets1(X) & style(sets13, background-color, white) & ~style(sets13, background-color, yellow) & style(sets15, background-color, white) & ~style(sets15, background-color, yellow)
+    click(sets14) :: cur_numsets1(4) & style(sets14, background-color, yellow) & ~style(sets14, background-color, white)
+    click(sets15) :: cur_numsets1(X) ==> ~cur_numsets1(X) & style(sets13, background-color, white) & ~style(sets13, background-color, yellow) & style(sets14, background-color, white) & ~style(sets14, background-color, yellow)
+    click(sets15) :: cur_numsets1(5) & style(sets15, background-color, yellow) & ~style(sets15, background-color, white)
+    click(sets23) :: cur_numsets2(X) ==> ~cur_numsets2(X) & style(sets24, background-color, white) & ~style(sets24, background-color, yellow) & style(sets25, background-color, white) & ~style(sets25, background-color, yellow)
+    click(sets23) :: cur_numsets2(3) & style(sets23, background-color, yellow) & ~style(sets23, background-color, white)
+    click(sets24) :: cur_numsets2(X) ==> ~cur_numsets2(X) & style(sets23, background-color, white) & ~style(sets23, background-color, yellow) & style(sets25, background-color, white) & ~style(sets25, background-color, yellow)
+    click(sets24) :: cur_numsets2(4) & style(sets24, background-color, yellow) & ~style(sets24, background-color, white)
+    click(sets25) :: cur_numsets2(X) ==> ~cur_numsets2(X) & style(sets23, background-color, white) & ~style(sets23, background-color, yellow) & style(sets24, background-color, white) & ~style(sets24, background-color, yellow)
+    click(sets25) :: cur_numsets2(5) & style(sets25, background-color, yellow) & ~style(sets25, background-color, white)
+    click(sets33) :: cur_numsets3(X) ==> ~cur_numsets3(X) & style(sets34, background-color, white) & ~style(sets34, background-color, yellow) & style(sets35, background-color, white) & ~style(sets35, background-color, yellow)
+    click(sets33) :: cur_numsets3(3) & style(sets33, background-color, yellow) & ~style(sets33, background-color, white)
+    click(sets34) :: cur_numsets3(X) ==> ~cur_numsets3(X) & style(sets33, background-color, white) & ~style(sets33, background-color, yellow) & style(sets35, background-color, white) & ~style(sets35, background-color, yellow)
+    click(sets34) :: cur_numsets3(4) & style(sets34, background-color, yellow) & ~style(sets34, background-color, white)
+    click(sets35) :: cur_numsets3(X) ==> ~cur_numsets3(X) & style(sets33, background-color, white) & ~style(sets33, background-color, yellow) & style(sets34, background-color, white) & ~style(sets34, background-color, yellow)
+    click(sets35) :: cur_numsets3(5) & style(sets35, background-color, yellow) & ~style(sets35, background-color, white)
+
+    % 3/4/5 Sets boxes operations
+    innerhtml(num1, SR1) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets1(S) & setreps(A,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR1)
+    innerhtml(num2, SR2) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets1(S) & setreps(B,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR2)
+    innerhtml(num3, SR3) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets1(S) & setreps(C,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR3)
+    innerhtml(num4, SR4) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets1(S) & setreps(D,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR4)
+    innerhtml(num5, SR5) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets2(S) & setreps(E,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR5)
+    innerhtml(num6, SR6) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets2(S) & setreps(F,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR6)
+    innerhtml(num7, SR7) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets2(S) & setreps(G,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR7)
+    innerhtml(num8, SR8) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets2(S) & setreps(H,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR8)
+    innerhtml(num9, SR9) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets3(S) & setreps(I,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR9) 
+    innerhtml(num10, SR10) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets3(S) & setreps(J,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR10)
+    innerhtml(num11, SR11) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets3(S) & setreps(K,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR11)
+    innerhtml(num12, SR12) :- list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & cur_numsets3(S) & setreps(L,S,R) & yes(makesets) & evaluate(stringappend(S," sets of ",R," reps"),SR12)
+
+    % Make Set button operations
+    click(makesets) :: list_exercises(Y) ==> ~list_exercises(Y) & ~yes(makesets) & ~yes(clear)
+    click(makesets) :: evaluate(setofall(X, cur_exercise(X)), Y) ==> list_exercises(Y) & yes(makesets)
+    innerhtml(exercise1, E1) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(A, N) & evaluate(N,E1) 
+    innerhtml(exercise2, E2) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(B, N) & evaluate(N,E2)
+    innerhtml(exercise3, E3) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(C, N) & evaluate(N,E3)
+    innerhtml(exercise4, E4) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(D, N) & evaluate(N,E4)
+    innerhtml(exercise5, E5) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(E, N) & evaluate(N,E5)
+    innerhtml(exercise6, E6) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(F, N) & evaluate(N,E6)
+    innerhtml(exercise7, E7) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(G, N) & evaluate(N,E7)
+    innerhtml(exercise8, E8) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(H, N) & evaluate(N,E8)
+    innerhtml(exercise9, E9) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(I, N) & evaluate(N,E9)
+    innerhtml(exercise10, E10) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(J, N) & evaluate(N,E10)
+    innerhtml(exercise11, E11) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(K, N) & evaluate(N,E11)
+    innerhtml(exercise12, E12) :- evaluate(countofall(X,cur_exercise(X)), 12) & list_exercises([A,B,C,D,E,F,G,H,I,J,K,L]) & yes(makesets) & name(L, N) & evaluate(N,E12)
+
+    % Clear button operations
+    click(clear) :: yes(clear) & ~yes(makesets)
+    click(clear) :: cur_exercise(Y) ==> ~cur_exercise(Y) & ~value(Y,true)
+    click(clear) :: cur_muscle(X) ==> ~cur_muscle(X) & ~value(X,true)
+    click(clear) :: cur_numsets1(A) & cur_numsets2(B) & cur_numsets3(C) ==> ~cur_numsets1(A) & ~cur_numsets2(B) & ~cur_numsets3(C)
+    click(clear) :: style(B, background-color, yellow) ==> style(B, background-color, white) & ~style(B, background-color, yellow)
+    innerhtml(exercise1, C1) :- yes(clear) & evaluate("Ex1: ",C1)
+    innerhtml(exercise2, C2) :- yes(clear) & evaluate("Ex2: ",C2)
+    innerhtml(exercise3, C3) :- yes(clear) & evaluate("Ex3: ",C3)
+    innerhtml(exercise4, C4) :- yes(clear) & evaluate("Ex4: ",C4)
+    innerhtml(exercise5, C5) :- yes(clear) & evaluate("Ex1: ",C5)
+    innerhtml(exercise6, C6) :- yes(clear) & evaluate("Ex2: ",C6)
+    innerhtml(exercise7, C7) :- yes(clear) & evaluate("Ex3: ",C7)
+    innerhtml(exercise8, C8) :- yes(clear) & evaluate("Ex4: ",C8)
+    innerhtml(exercise9, C9) :- yes(clear) & evaluate("Ex1: ",C9)
+    innerhtml(exercise10, C10) :- yes(clear) & evaluate("Ex2: ",C10)
+    innerhtml(exercise11, C11) :- yes(clear) & evaluate("Ex3: ",C11)
+    innerhtml(exercise12, C12) :- yes(clear) & evaluate("Ex4: ",C12)
+    innerhtml(num1, C1) :- yes(clear) & evaluate("",C1)
+    innerhtml(num2, C2) :- yes(clear) & evaluate("",C2)
+    innerhtml(num3, C3) :- yes(clear) & evaluate("",C3)
+    innerhtml(num4, C4) :- yes(clear) & evaluate("",C4)
+    innerhtml(num5, C5) :- yes(clear) & evaluate("",C5)
+    innerhtml(num6, C6) :- yes(clear) & evaluate("",C6)
+    innerhtml(num7, C7) :- yes(clear) & evaluate("",C7)
+    innerhtml(num8, C8) :- yes(clear) & evaluate("",C8)
+    innerhtml(num9, C9) :- yes(clear) & evaluate("",C9)
+    innerhtml(num10, C10) :- yes(clear) & evaluate("",C10)
+    innerhtml(num11, C11) :- yes(clear) & evaluate("",C11)
+    innerhtml(num12, C12) :- yes(clear) & evaluate("",C12)
+
+    % Number of exercise Error Message operations
+    innerhtml(errormessage, E) :- ~yes(clear) & yes(makesets) & ~evaluate(countofall(X, cur_exercise(X)), 12) & evaluate(stringappend("You have selected ",countofall(X,cur_exercise(X))," exercises -- please select 12."), E)
+    innerhtml(errormessage, E) :- (evaluate(countofall(X, cur_exercise(X)), 12) | yes(clear)) & evaluate("", E)
+
+    % Weight and Reps input operations
+    select(weight,X) :: weight(Y) ==> ~weight(Y)
+    select(weight,X) :: weight(X)
+    select(reps,X) :: reps(Y) ==> ~reps(Y)
+    select(reps,X) :: reps(X)
+    
+    % Find Max start button
+    click(findmax) :: yes(findmax)
+
+    % 1 Rep Max lift-specific calculations
+    click(squatpr) :: lift(X) ==> ~lift(X) & style(benchpr, background-color, white) & ~style(benchpr, background-color, yellow) & style(deadliftpr, background-color, white) & ~style(deadliftpr, background-color, yellow) & style(rowpr, background-color, white) & ~style(rowpr, background-color, yellow)
+    click(squatpr) :: lift(squat) & style(squatpr, background-color, yellow) & ~style(squatpr, background-color, white)
+    click(benchpr) :: lift(X) ==> ~lift(X) & style(squatpr, background-color, white) & ~style(squatpr, background-color, yellow) & style(deadliftpr, background-color, white) & ~style(deadliftpr, background-color, yellow) & style(rowpr, background-color, white) & ~style(rowpr, background-color, yellow)
+    click(benchpr) :: lift(bench) & style(benchpr, background-color, yellow) & ~style(bench, background-color, white)
+    click(deadliftpr) :: lift(X) ==> ~lift(X) & style(squatpr, background-color, white) & ~squat(squatpr, background-color, yellow) & style(benchpr, background-color, white) & ~style(benchpr, background-color, yellow) & style(rowpr, background-color, white) & ~style(rowpr, background-color, yellow)
+    click(deadliftpr) :: lift(deadlift) & style(deadliftpr, background-color, yellow) & ~style(deadliftpr, background-color, white)
+    click(rowpr) :: lift(X) ==> ~lift(X) & style(squatpr, background-color, white) & ~style(squatpr, background-color, yellow) & style(benchpr, background-color, white) & ~style(benchpr, background-color, yellow) & style(deadliftpr, background-color, white) & ~style(deadliftpr, background-color, yellow)
+    click(rowpr) :: lift(row) & style(rowpr, background-color, yellow) & ~style(rowpr, background-color, white)
+
+    % Max output
+    innerhtml(showmax,O) :- yes(findmax) & weight(W) & reps(R) & lift(squat) & evaluate(stringappend("Max: ",quotient(W,minus(1.0278, times(0.0278, R)))), O)
+    innerhtml(showmax,O) :- yes(findmax) & weight(W) & reps(R) & lift(bench) & evaluate(stringappend("Max: ",times(W,plus(1,times(0.0333,R)))), O)
+    innerhtml(showmax,O) :- yes(findmax) & weight(W) & reps(R) & lift(deadlift) & evaluate(stringappend("Max: ",quotient(times(100,W),minus(101.3,times(2.67123,R)))), O)
+    innerhtml(showmax,O) :- yes(findmax) & weight(W) & reps(R) & lift(row) & evaluate(stringappend("Max: ",times(W,pow(R,0.1))), O)
+</ruleset>
+
+<!--=======================================================================-->
+
+</body>
+
+<!--=======================================================================-->
+
+</html>
+
+
