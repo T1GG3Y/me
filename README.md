@@ -6,6 +6,10 @@ Hi, I’m **Tiger Bachmeier**! I’m passionate about combining technology, crea
 
 ## Projects
 
+
+### **AI Travel Recommendation Agent**
+[Video Walkthrough](https://drive.google.com/file/d/1ffi2MJJPPNzAFoWMM1BC89ZtqyCy_H5z/view?usp=sharing)
+
 ### **Gym Workout Website**
 A First-Order Logic-based workout planner.  
 [Explore it here](https://github.com/T1GG3Y/me/blob/main/gym.html)
