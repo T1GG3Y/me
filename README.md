@@ -23,6 +23,11 @@ Analyzed election outcomes using Logistic Regression and K-Nearest Neighbors.
 - [Prediction Writeup](https://drive.google.com/file/d/1biG2F39umbv4y3Jb4FzQfl6QqB9zWHSH/view?usp=drive_link)  
 - [YouTube Walkthrough](https://youtu.be/J-5mnHWEG40)
 
+  
+### **Generative AI Presentation Slides**
+
+[HERE](https://docs.google.com/presentation/d/1Hk_iRKdVs8FezswzYnsoe6YRyz2Ev76_b0bLachBXzM/edit?usp=sharing)
+
 ### **Creative 3D Modeling**
 Developed Blender images with Python scripts to explore computational art.  
 [Gallery](https://drive.google.com/drive/folders/1Y8eutGE-xSZmi38yOZ8dWDx9maDhjmY4?usp=drive_link)
