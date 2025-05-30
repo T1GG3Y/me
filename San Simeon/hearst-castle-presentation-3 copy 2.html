@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearst Castle Construction Camp: Worker Housing and Communal Facilities (1919-1940s)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            overflow-x: hidden;
+        }
+        
+        .slide {
+            width: 1024px;
+            height: 768px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 50px 70px;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            page-break-after: always;
+            overflow: hidden;
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            color: #5a6c7d;
+            font-size: 14px;
+        }
+        
+        h1 {
+            color: #1e3a5f;
+            font-size: 42px;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            color: #2c5282;
+            font-size: 32px;
+            margin: 0 0 25px 0;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #3a5a7a;
+            font-size: 20px;
+            margin: 15px 0 10px 0;
+        }
+        
+        p, li {
+            color: #4a5568;
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        
+        ul {
+            padding-left: 25px;
+            margin: 10px 0;
+        }
+        
+        .citation {
+            font-size: 12px;
+            color: #718096;
+            font-style: italic;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .title-slide {
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3a5f 0%, #4a90e2 100%);
+            color: white;
+        }
+        
+        .title-slide h1 {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+        
+        .title-slide p {
+            color: #e2e8f0;
+            font-size: 22px;
+        }
+        
+        .section-divider {
+            background: linear-gradient(135deg, #2c5282 0%, #4a90e2 100%);
+            color: white;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .section-divider h1 {
+            color: white;
+            font-size: 48px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 15px;
+        }
+        
+        .highlight-box {
+            background-color: #edf2f7;
+            border-left: 4px solid #4a90e2;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .highlight-box h3 {
+            margin-top: 0;
+        }
+        
+        .highlight-box ul {
+            margin: 5px 0;
+        }
+        
+        .key-point {
+            background-color: #f7fafc;
+            border: 2px solid #4a90e2;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        
+        .key-point h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .compact-list li {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        
+        .reference-slide {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        
+        .reference-slide p {
+            font-size: 13px;
+            margin: 8px 0;
+        }
+        
+        .slide-image {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            background-color: #f8f9fa;
+        }
+        
+        .full-slide-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            margin: 20px 0;
+        }
+        
+        .full-slide-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-caption {
+            font-size: 14px;
+            color: #718096;
+            text-align: center;
+            margin-top: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title Slide -->
+    <div class="slide title-slide">
+        <h1>Hearst Castle Construction Camp</h1>
+        <p>Worker Housing and Communal Facilities</p>
+        <p>(1919-1940s)</p>
+        <p> Tiger Bachmeier</p>
+        <div style="margin-top: 30px;">
+            <img src="aerial.jpg" style="max-width: 500px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);" alt="Aerial view of Hearst Castle">
+        </div>
+        <div style="margin-top: 30px;">
+            <p style="font-size: 18px;">A comprehensive examination of the living conditions and community structure during the construction of one of America's most ambitious building projects</p>
+        </div>
+        <div class="slide-number">1</div>
+    </div>
+
+    <!-- Slide 2: What is Hearst Castle -->
+    <div class="slide">
+        <h2>Hearst Castle: An American Palace</h2>
+        <h3>Overview and Location</h3>
+        <p>Hearst Castle, formally known as La Cuesta Encantada ("The Enchanted Hill"), stands as one of America's most opulent private estates. Built for newspaper enthusiast William Randolph Hearst between 1919 and 1947, this architectural marvel represents the pinnacle of American luxury and ambition during the early 20th century.</p>
+        <div class="highlight-box">
+            <h3>Location Details</h3>
+            <p>The castle sits atop a 1,600-foot hill in San Simeon, California. Approximately halfway between Los Angeles and San Francisco along Pacific Coast. The estate overlooks the Pacific Ocean and encompasses 127 acres of gardens, terraces, pools, and walkways, the surrounding ranch property originally spanning over 250,000 acres.</p>
+        </div>
+        <p>Designed by California's first licensed female architect Julia Morgan, the estate features 165 rooms and 123 acres of gardens. It combines Mediterranean Revival, Spanish Colonial, and Gothic architectural styles. Today, it's a California State Park and attracts nearly one million visitors annually.</p>
+        <div class="citation">Sources: Hearst Castle Official Website; California State Parks</div>
+        <div class="slide-number">2</div>
+    </div>
+
+    <!-- Slide 2a: Castle Views -->
+    <div class="slide">
+        <h2>The Enchanted Hill</h2>
+        <div class="image-grid">
+            <div>
+                <img src="front.jpeg" alt="Front view of Hearst Castle">
+                <p class="image-caption">Main facade of Casa Grande</p>
+            </div>
+            <div>
+                <img src="airplane view of coast.jpeg" alt="Aerial coastal view">
+                <p class="image-caption">Aerial view of the coastline</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px;">The castle's dramatic hilltop location offers commanding views of the Pacific Ocean and surrounding landscape.</p>
+        <div class="slide-number">3</div>
+    </div>
+
+    <!-- Slide 3: Project Overview -->
+    <div class="slide">
+        <h2>Construction Project Overview</h2>
+        <div class="highlight-box">
+            <h3>Key Facts</h3>
+            <ul class="compact-list">
+                <li>Construction spanned nearly 28 years (1919-1947)</li>
+                <li>100-150 workers lived on-site during peak construction</li>
+                <li>Julia Morgan designed both the castle and workers' camp</li>
+                <li>Provided crucial employment during Great Depression</li>
+            </ul>
+        </div>
+        <p>The Hearst Castle construction project required an entire support infrastructure, a dedicated workers' camp that evolved into a mountaintop community.</p>
+        <div class="citation">Sources: Hearst Castle Official Website¹; SAH Archipedia²; Rost Architects¹⁶</div>
+        <div class="slide-number">4</div>
+    </div>
+
+    <!-- Slide 3a: Construction in Progress -->
+    <div class="slide">
+        <h2>Building the Dream</h2>
+        <div class="full-slide-image">
+            <img src="building construction.HEIC" alt="Construction in progress">
+        </div>
+        <p style="text-align: center;">Construction crews at work on one of the castle's many structures, showcasing the massive scale of the project.</p>
+        <div class="slide-number">5</div>
+    </div>
+
+    <!-- Slide 4: Section Divider - Architectural and Physical Aspects -->
+    <div class="slide section-divider">
+        <h1>Architectural and Physical Aspects</h1>
+        <div class="slide-number">6</div>
+    </div>
+
+    <!-- Slide 7: Evolution of the Hilltop Community -->
+    <div class="slide">
+        <h2>Evolution of the Hilltop Community</h2>
+        <h3>From Canvas to Construction Camp</h3>
+        <p>The workers' camp originated from Hearst's own discomfort with tent camping. As construction manager records reveal, Hearst told Morgan he was "getting too old" for sleeping under canvas on Camp Hill and that he needed "something a little more comfortable." This preference catalyzed the development of permanent structures for the castle and the builders.</p>
+        <div class="highlight-box">
+            <h3>Construction Management Evolution (1919-1940)</h3>
+            <p>The camp transformed under three successive superintendents: Henry Washburn (1919-22) established initial facilities, Camille Rossi (1922-32) expanded barracks system, and George Loorz (1932-40) modernized the camp by standardizing electricity and plumbing throughout the workers' quarters. Almost 10 years without good plumbing. Each manager organized facilities, converting temporary tents to permanent wood-frame structures.</p>
+        </div>
+        <p>By the late 1920s, Morgan's design included dedicated staff areas within Casa Grande itself. The south service wing had a separate staff dining room and 9,000-square-foot basement with support facilities. This allowed female employees and senior servants to move from hilltop barracks into purpose-built interior rooms. Construction crews remained outside—showing practical needs and social hierarchies of the era.</p>
+        <div class="citation">Sources: Aidala architectural analysis; Loorz Papers via Coffman; Hearst Castle construction records</div>
+        <div class="slide-number">7</div>
+    </div>
+
+    <!-- Slide 5: Design and Layout of the Barracks -->
+    <div class="slide">
+        <h2>Design and Layout of the Barracks</h2>
+        <p>During Hearst Castle's decades-long construction, a dedicated workers' camp grew on the hilltop to house the crews.</p>
+        <div class="highlight-box">
+            <h3>Julia Morgan's Design Approach</h3>
+            <ul class="compact-list">
+                <li>Personally planned the workers' camp "down to the minutest detail"</li>
+                <li>Numerous barracks and simple cabins along south side of hill</li>
+                <li>Utilitarian dormitory structures for male workers</li>
+                <li>Clustered conveniently near work site but ALSO out of view from Casa Grande</li>
+            </ul>
+        </div>
+        <p>Contemporary aerial photos show a virtual village of "many informal barracks for hilltop construction workers" alongside support buildings.</p>
+        <div class="citation">Sources: Hearst Castle Official Website¹; SAH Archipedia²</div>
+        <div class="slide-number">8</div>
+    </div>
+
+    <!-- Slide 5a: Worker Housing -->
+    <div class="slide">
+        <h2>Worker Housing and Camp Layout</h2>
+        <div class="image-grid">
+            <div>
+                <img src="servant house.HEIC" alt="Worker housing">
+                <p class="image-caption">Worker barracks on the hillside</p>
+            </div>
+            <div>
+                <img src="zoning.jpeg" alt="Camp layout zoning">
+                <p class="image-caption">Camp zoning and layout plan</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">The workers' camp was carefully planned to provide housing close to the construction site and remaining out of view from the main estate.</p>
+        <div class="slide-number">9</div>
+    </div>
+
+    <!-- Slide 6: Construction and Materials -->
+    <div class="slide">
+        <h2>Construction and Materials</h2>
+        <div class="two-column">
+            <div>
+                <h3>Building Approach</h3>
+                <ul class="compact-list">
+                    <li>Built quickly</li>
+                    <li>Simple wood-frame construction</li>
+                    <li>Basic finishes for temporary use</li>
+                    <li>Designed to withstand coastal weather</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Infrastructure Development</h3>
+                <ul class="compact-list">
+                    <li>Water from distant springs pipeline instead of walking or wells</li>
+                    <li>Private wharf and light-duty railroad</li>
+                    <li>On-site brick and tile production</li>
+                    <li>Mission-style warehouses and workshops</li>
+                </ul>
+            </div>
+        </div>
+        <div class="key-point">
+            <p>Morgan leveraged her background to ensure temporary buildings withstood the windy mountaintop.</p>
+        </div>
+        <div class="citation">Sources: Airstream Travelers⁵; Hearst Castle Wikipedia³⁴; Hearst Ranch History⁶⁷</div>
+        <div class="slide-number">10</div>
+    </div>
+
+    <!-- Slide 6a: Construction Infrastructure -->
+    <div class="slide">
+        <h2>Building Infrastructure</h2>
+        <div class="image-grid">
+            <div>
+                <img src="wood warehouse.HEIC" alt="Wood warehouse construction">
+                <p class="image-caption">Materials warehouse</p>
+            </div>
+            <div>
+                <img src="wood scaffolds.HEIC" alt="Wooden scaffolding">
+                <p class="image-caption">Scaffolding systems</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">Extensive scaffolding and storage facilities were essential for the decades-long construction project.</p>
+        <div class="slide-number">11</div>
+    </div>
+
+    <!-- Slide 7: Location and Site Planning -->
+    <div class="slide">
+        <h2>Location and Site Planning</h2>
+        <h3>Strategic Placement on "Camp Hill"</h3>
+        <p>The main workers' camp occupied a plateau on the south slope of "Camp Hill" - aptly named since Hearst's family originally camped there in tents.</p>
+        <div class="highlight-box">
+            <h3>Site Planning Considerations:</h3>
+            <ul class="compact-list">
+                <li>Located just downhill from core construction zone</li>
+                <li>Kept out of immediate view of Hearst's guests</li>
+                <li>5 miles up winding road made daily commuting impractical</li>
+                <li>San Simeon population under 30 in 1919. Juxtaposition to a boom in population and guests being brought in</li>
+            </ul>
+        </div>
+        <p>Morgan's plan turned the hilltop into a self-sufficient camp. It had temporary power lines, makeshift plumbing, and wind protection of 80-mph winds.</p>
+        <div class="citation">Sources: SAH Archipedia²¹¹; Hearst Castle Wikipedia⁹¹⁰; PBS¹¹</div>
+        <div class="slide-number">12</div>
+    </div>
+
+    <!-- Slide 7a: Architectural Plans -->
+    <div class="slide">
+        <h2>Morgan's Detailed Planning</h2>
+        <div class="image-grid">
+            <div>
+                <img src="building plan.HEIC" alt="Construction planning documents">
+                <p class="image-caption">Original construction plans</p>
+            </div>
+            <div>
+                <img src="another building plan.HEIC" alt="Additional building plans">
+                <p class="image-caption">Detailed architectural drawings</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">Julia Morgan's meticulous planning extended to every aspect of the construction camp and support facilities.</p>
+        <div class="slide-number">13</div>
+    </div>
+
+    <!-- Slide 7b: Morgan-Hearst Correspondence -->
+    <div class="slide">
+        <h2>Correspondence: Morgan and Hearst</h2>
+        <div class="full-slide-image" style="height: 600px;">
+            <img src="chats.HEIC" alt="Letters between Julia Morgan and William Randolph Hearst">
+        </div>
+        <p style="text-align: center; margin-top: 10px; font-size: 16px;">Original correspondence between architect Julia Morgan and William Randolph Hearst, revealing their collaborative process and attention to detail.</p>
+        <div class="slide-number">14</div>
+    </div>
+
+    <!-- Slide 8: Julia Morgan's Role in Design -->
+    <div class="slide">
+        <h2>Julia Morgan's Comprehensive Vision</h2>
+        <p>Julia Morgan served as both architect and general contractor, directing every aspect of construction.</p>
+        <div class="two-column">
+            <div>
+                <h3>Design Scope</h3>
+                <ul class="compact-list">
+                    <li>Master planner of entire hilltop</li>
+                    <li>Designed workers' quarters alongside palaces</li>
+                    <li>Five Spanish/Mission style residences for employees</li>
+                    <li>Mission-style warehouse for art collection</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Holistic Approach</h3>
+                <ul class="compact-list">
+                    <li>Everything from Casa Grande all the way to bunk beds</li>
+                    <li>Well-built and efficient facilities</li>
+                    <li>Improved daily life for crews</li>
+                    <li>28 years of organized construction</li>
+                </ul>
+            </div>
+        </div>
+        <div class="citation">Sources: Hearst Castle Official Website¹²; SAH Archipedia⁶; Bluffton University⁶</div>
+        <div class="slide-number">15</div>
+    </div>
+
+    <!-- Slide 9: Section Divider - Social and Historical Aspects -->
+    <div class="slide section-divider">
+        <h1>Social and Historical Aspects</h1>
+        <div class="slide-number">16</div>
+    </div>
+
+    <!-- Slide 10: Living Conditions and Community Structure -->
+    <div class="slide">
+        <h2>Living Conditions and Community Structure</h2>
+        <p>Life in the hilltop construction camp was rugged but came with basic comforts provided by Hearst.</p>
+        <div class="highlight-box">
+            <h3>Daily Life Details:</h3>
+            <ul class="compact-list">
+                <li>Between 100-150 workers during peak construction. More likely 25-70 daily</li>
+                <li>Mostly single men or men who left families elsewhere</li>
+                <li>Group barracks with bunk beds and heating stoves</li>
+                <li>Free housing and meals on the job</li>
+            </ul>
+        </div>
+        <h3>Gender Segregation</h3>
+        <p>Male laborers in hillside camp; women staff initially in separate quarters, later in twelve bedrooms above castle kitchen (mid-1920s). This reflected social norms while creating unique mountaintop community.</p>
+        <div class="citation">Sources: SAH Archipedia¹³¹⁴; Rost Architects¹⁶; PBS¹⁰¹¹</div>
+        <div class="slide-number">17</div>
+    </div>
+
+    <!-- Slide 11: Dining Facilities and Communal Resources -->
+    <div class="slide">
+        <h2>Dining Facilities and Communal Resources</h2>
+        <div class="two-column">
+            <div>
+                <h3>The Mess Hall</h3>
+                <ul class="compact-list">
+                    <li>Heart of camp social life</li>
+                    <li>Professional cooks--three meals daily</li>
+                    <li>Hearst dined with crew (1920-1924). 5 Years?</li>
+                    <li>Long tables</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Other Amenities</h3>
+                <ul class="compact-list">
+                    <li>Bathhouses with showers</li>
+                    <li>Laundry facilities</li>
+                    <li>Recreation: cards, radio, films</li>
+                    <li>Shared facilities for men and women</li>
+                </ul>
+            </div>
+        </div>
+        <div class="key-point">
+            <p>Hearst would tell projectionist to replay Marion Davies' "Peg o' My Heart" repeatedly. Movie about Blue-Blood inheritance</p>
+        </div>
+        <div class="citation">Sources: PBS¹⁰¹¹; SAH Archipedia²; Hearst Castle Oral History¹⁵</div>
+        <div class="slide-number">18</div>
+    </div>
+
+    <!-- Slide 11a: The Mess Hall -->
+    <div class="slide">
+        <h2>Heart of the Community: The Mess Hall</h2>
+        <div class="full-slide-image">
+            <img src="cafeteria.jpg" alt="Workers' cafeteria">
+        </div>
+        <p style="text-align: center;">The mess hall served as the social center of camp life, where workers gathered for three meals daily and evening recreation.</p>
+        <div class="slide-number">19</div>
+    </div>
+
+    <!-- Slide 12: Worker Experiences During the Great Depression -->
+    <div class="slide">
+        <h2>Worker Experiences During the Great Depression</h2>
+        <h3>Economic Lifeline for the Region</h3>
+        <p>Much of the building took place in the 1930s when unemployment was high.</p>
+        <div class="highlight-box">
+            <ul class="compact-list">
+                <li>Provided steady jobs for hundreds in San Luis Obispo County</li>
+                <li>"Employed hundreds of local residents"</li>
+                <li>"Provided a lifeline for the town's survival"</li>
+                <li>Modest wages, with meals and housing covered</li>
+            </ul>
+        </div>
+        <p>Despite Hearst's perfectionism requiring frequent changes, like the Neptune Pool salt water incident, he wanted salt and messed up pipes, workers remained loyal, aware they had landed rare steady employment during hard times.</p>
+        <div class="citation">Sources: Rost Architects¹⁶¹⁹; Hearst Castle Wikipedia¹⁶¹⁷</div>
+        <div class="slide-number">20</div>
+    </div>
+
+    <!-- Slide 12a: The Workers -->
+    <div class="slide">
+        <h2>The Builders of the Dream</h2>
+        <div class="full-slide-image">
+            <img src="hard workers.HEIC" alt="Construction workers">
+        </div>
+        <p style="text-align: center;">Dedicated construction crews worked tirelessly for decades, many staying for ten years or more during the Great Depression.</p>
+        <div class="slide-number">21</div>
+    </div>
+
+    <!-- Slide 13: Oral Histories and Memoirs -->
+    <div class="slide">
+        <h2>Oral Histories and Memoirs</h2>
+        <div class="two-column">
+            <div>
+                <h3>Daily Routines Recalled</h3>
+                <ul class="compact-list">
+                    <li>7AM whistle summoning to work</li>
+                    <li>Communal breakfasts, endless coffee</li>
+                    <li>Arduous climbs up scaffolding</li>
+                    <li>Evening baseball games, Carpernters vs Plumbers</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Memorable Stories</h3>
+                <ul class="compact-list">
+                    <li>"Put on Marion's Peg o' My Heart"</li>
+                    <li>Eight men to a barracks room</li>
+                    <li>Newspaper clippings on walls, pages from Hearst's own papers</li>
+                    <li>Christmas parties for workers' children, who got to ride the bus to the top of the hill and pick from the tree</li>
+                </ul>
+            </div>
+        </div>
+        <p>Workers admired "Miss Morgan" for her tireless work ethic - arriving at 2 AM, jumping on scaffolds by morning, inspecting every detail including living quarters.</p>
+        <div class="key-point">
+            <p>The Churrigueresque, New Spain architectural style focused ornament on doorways, windows, and towers, requiring workers to spend months carving stone and installing tile. The camp mess hall schedule often shifted to night shifts so crews could complete these heavily decorated doors without interrupting daytime guest traffic.</p>
+        </div>
+        <div class="citation">Sources: Hearst Castle Oral History¹⁵; PBS¹⁶²; Wikipedia¹⁸</div>
+        <div class="slide-number">22</div>
+    </div>
+
+    <!-- Slide 13a: The Treasures They Built -->
+    <div class="slide">
+        <h2>Creating a Place of Splendor</h2>
+        <div class="full-slide-image">
+            <img src="treasure.jpeg" alt="Hearst Castle treasures">
+        </div>
+        <p style="text-align: center;">Workers carefully installed priceless art and architectural elements, transforming Hearst's vision into reality.</p>
+        <div class="slide-number">23</div>
+    </div>
+
+    <!-- Slide 14: Legacy and Conclusion -->
+    <div class="slide">
+        <h2>Legacy of the Construction Camp</h2>
+        <h3>End of an Era (1947)</h3>
+        <p>When William Randolph Hearst left San Simeon in 1947 and construction finally ceased, the era of the worker camp ended.</p>
+        <div class="highlight-box">
+            <h3>Lasting Impact:</h3>
+            <ul class="compact-list">
+                <li>Created unique mountaintop community: 28 years</li>
+                <li>Made brotherhood through shared hardship</li>
+                <li>Provided Depression economic stability</li>
+                <li>Left rich oral histories documenting American labor</li>
+            </ul>
+        </div>
+        <p>The legacy of that unique community endures tales of an "enchanted hill" graced by art and architecture. But built by the hard work of hundreds who forged a lively and old home in its shadow.</p>
+        <div class="citation">Sources: SAH Archipedia¹⁶²; Rost Architects¹⁶; Hearst Castle Official Website</div>
+        <div class="slide-number">24</div>
+    </div>
+
+    <!-- Slide 15: San Simeon Media Gallery -->
+    <div class="slide" id="media-gallery-slide">
+        <h2>San Simeon Gallery</h2>
+        <div class="media-container" id="media-container" style="position: relative; height: 550px; display: flex; align-items: center; justify-content: center; background-color: #000; cursor: pointer;">
+            <img id="media-display" src="" style="max-width: 100%; max-height: 100%; object-fit: contain; display: none; pointer-events: none;">
+            <video id="video-display" style="max-width: 100%; max-height: 100%; object-fit: contain; display: none; pointer-events: none;" muted autoplay></video>
+            <div id="media-loading" style="color: white; font-size: 24px; pointer-events: none;">Loading media...</div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <span id="media-counter" style="font-size: 16px; color: #5a6c7d;"></span>
+            <div style="font-size: 14px; color: #718096; margin-top: 5px;">Click to advance</div>
+        </div>
+        <div class="slide-number">25</div>
+    </div>
+
+    <!-- Slide 16: Complete References -->
+    <div class="slide">
+        <h2>Complete References</h2>
+        <div class="reference-slide">
+            <p><strong>1.</strong> Hearst Castle Official Website – Julia Morgan Profile. https://hearstcastle.org/history-behind-hearst-castle/historic-people/profiles/julia-morgan/</p>
+            <p><strong>2.</strong> SAH Archipedia – Hearst Castle Entry. https://sah-archipedia.org/buildings/CA-01-079-0050</p>
+            <p><strong>4.</strong> Hearst Castle - Wikipedia. https://en.wikipedia.org/wiki/Hearst_Castle</p>
+            <p><strong>5.</strong> Airstream Travelers – "San Simeon—One Man's Castle" (2019). https://airstreamtravelers.wordpress.com/2019/05/09/san-simeon-one-mans-castle/</p>
+            <p><strong>6.</strong> Bluffton University – Introduction to Images of the Hearst Castle by Julia Morgan. https://homepages.bluffton.edu/~sullivanm/jmhearstss/intro.html</p>
+            <p><strong>7.</strong> Hearst Ranch History – "Piedra Blanca: The San Simeon Ranch". https://www.hearstranch.com/about/piedra-blanca-the-san-simeon-ranch/</p>
+            <p><strong>8.</strong> Hearst Castle - Wikipedia [Construction Infrastructure sections]</p>
+            <p><strong>10.</strong> William Randolph Hearst's Castle at San Simeon | American Experience | PBS. https://www.pbs.org/wgbh/americanexperience/features/citizen-hearst-castle-san-simeon/</p>
+            <p><strong>11.</strong> SAH Archipedia [Community Life sections]</p>
+            <p><strong>13.</strong> Hearst Castle - Wikipedia [Transportation and Logistics sections]</p>
+            <p><strong>15.</strong> Hearst Castle Oral History Project (1986) via Wikipedia</p>
+            <p><strong>16.</strong> Rost Architects – "A Brief History of the Hearst Castle and Architect Julia Morgan" (December 2022). https://www.rostarchitects.com/articles/2022/12/8/hearst-castle</p>
+            <p><strong>17.</strong> Hearst Castle Oral History [Neptune Pool saltwater anecdote]</p>
+            <p><strong>19.</strong> Rost Architects [Great Depression employment data]</p>
+        </div>
+        <div class="slide-number">26</div>
+    </div>
+
+    <script>
+        // Media slideshow functionality
+        const mediaFiles = [
+            { type: 'image', src: 'IMG_0163.jpg' },
+            { type: 'image', src: 'IMG_0246.jpg' },
+            { type: 'video', src: 'IMG_1071.mov' },
+            { type: 'image', src: 'IMG_2741.jpg' },
+            { type: 'image', src: 'IMG_6268.jpg' },
+            { type: 'image', src: 'aerial.jpg' },
+            { type: 'image', src: 'airplane view of coast.jpeg' },
+            { type: 'image', src: 'another building plan.HEIC' },
+            { type: 'image', src: 'building construction.HEIC' },
+            { type: 'image', src: 'building plan.HEIC' },
+            { type: 'image', src: 'cafeteria.jpg' },
+            { type: 'image', src: 'front.jpeg' },
+            { type: 'image', src: 'hard workers.HEIC' },
+            { type: 'image', src: 'servant house.HEIC' },
+            { type: 'image', src: 'treasure.jpeg' },
+            { type: 'image', src: 'wood scaffolds.HEIC' },
+            { type: 'image', src: 'wood warehouse.HEIC' },
+            { type: 'image', src: 'zoning.jpeg' }
+        ];
+
+        let currentMediaIndex = 0;
+        let slideshowInterval;
+        const basePath = './';
+
+        function showMedia(index) {
+            const media = mediaFiles[index];
+            const imgDisplay = document.getElementById('media-display');
+            const videoDisplay = document.getElementById('video-display');
+            const loadingDisplay = document.getElementById('media-loading');
+            const counter = document.getElementById('media-counter');
+
+            // Hide all displays first
+            imgDisplay.style.display = 'none';
+            videoDisplay.style.display = 'none';
+            loadingDisplay.style.display = 'none';
+
+            // Update counter
+            counter.textContent = `${index + 1} / ${mediaFiles.length}`;
+
+            if (media.type === 'image') {
+                imgDisplay.src = basePath + media.src;
+                imgDisplay.style.display = 'block';
+            } else if (media.type === 'video') {
+                videoDisplay.src = basePath + media.src;
+                videoDisplay.style.display = 'block';
+                videoDisplay.play();
+                
+                // Move to next media when video ends
+                videoDisplay.onended = () => {
+                    nextMedia();
+                };
+            }
+        }
+
+        function nextMedia() {
+            currentMediaIndex = (currentMediaIndex + 1) % mediaFiles.length;
+            showMedia(currentMediaIndex);
+        }
+
+        function startSlideshow() {
+            // Check if we're on the media gallery slide
+            const gallerySlide = document.getElementById('media-gallery-slide');
+            if (gallerySlide && gallerySlide.getBoundingClientRect().top >= 0 && 
+                gallerySlide.getBoundingClientRect().top <= window.innerHeight) {
+                
+                // Clear any existing interval
+                if (slideshowInterval) {
+                    clearInterval(slideshowInterval);
+                }
+
+                // Show first media
+                showMedia(currentMediaIndex);
+
+                // Set interval for images (videos will auto-advance when they end)
+                slideshowInterval = setInterval(() => {
+                    if (mediaFiles[currentMediaIndex].type === 'image') {
+                        nextMedia();
+                    }
+                }, 4000); // 4 seconds per image
+            }
+        }
+
+        // Start slideshow when page loads
+        window.addEventListener('load', () => {
+            setTimeout(startSlideshow, 100);
+        });
+
+        // Restart slideshow when scrolling to the gallery slide
+        window.addEventListener('scroll', () => {
+            const gallerySlide = document.getElementById('media-gallery-slide');
+            if (gallerySlide) {
+                const rect = gallerySlide.getBoundingClientRect();
+                if (rect.top >= -100 && rect.top <= window.innerHeight) {
+                    if (!slideshowInterval) {
+                        startSlideshow();
+                    }
+                } else {
+                    // Stop slideshow when not viewing the slide
+                    if (slideshowInterval) {
+                        clearInterval(slideshowInterval);
+                        slideshowInterval = null;
+                    }
+                }
+            }
+        });
+
+        // Add click event to advance slideshow
+        document.getElementById('media-container').addEventListener('click', () => {
+            // Clear the auto-advance interval
+            if (slideshowInterval) {
+                clearInterval(slideshowInterval);
+            }
+            
+            // Advance to next media
+            nextMedia();
+            
+            // Restart the interval for auto-advance
+            slideshowInterval = setInterval(() => {
+                if (mediaFiles[currentMediaIndex].type === 'image') {
+                    nextMedia();
+                }
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
