@@ -6,6 +6,8 @@ Hi, I’m **Tiger Bachmeier**! I’m passionate about combining technology, crea
 
 ## Projects
 
+### **Tumor Segementation through 3d U-Net Variants**
+[slides](https://docs.google.com/presentation/d/e/2PACX-1vRmv-qFxP7bcpFPL_aqF8hyeuwKY7xpz2K6tHTaFA6V3EA92HFIj9Hy71DvBh0nxV8MjrHSAFekhc17/pub?start=false&loop=false&delayms=3000)
 
 ### **AI Travel Recommendation Agent**
 [Video Walkthrough](https://drive.google.com/file/d/1ffi2MJJPPNzAFoWMM1BC89ZtqyCy_H5z/view?usp=sharing)
