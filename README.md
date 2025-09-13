@@ -34,6 +34,10 @@ Analyzed election outcomes using Logistic Regression and K-Nearest Neighbors.
 Developed Blender images with Python scripts to explore computational art.  
 [Gallery](https://drive.google.com/drive/folders/1Y8eutGE-xSZmi38yOZ8dWDx9maDhjmY4?usp=drive_link)
 
+### **APPS** 
+[Dating App:](https://apps.apple.com/us/app/lets-grab-a-beer-dating-advice/id6749338459)
+[Baseball/Laundry Ball Stat Tracking App:](https://apps.apple.com/us/app/laundry-ball/id6751511805)
+
 ---
 
 I enjoy solving complex problems, blending data science with real-world applications, and pushing the boundaries of creative technology. Let’s connect!
